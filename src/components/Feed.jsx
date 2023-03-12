@@ -9,10 +9,10 @@ const Feed = () => {
   const [videos, setVideos] = useState(null);
 
   useEffect(() => {
-  setVideos(null);
+    setVideos(null);
 
-   fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
-     .then((data) => setVideos(data.items))
+    fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
+      .then((data) => setVideos(data.items))
     }, [selectedCategory]);
 
   return (
@@ -21,7 +21,7 @@ const Feed = () => {
         <Sidebar selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
         
         <Typography className="copyright" variant="body2" sx={{ mt: 1.5, color: "#fff", }}>
-          Copyright © 2022 ACHUMBA
+          Copyright © 2022 JSM Media
         </Typography>
       </Box>
 
